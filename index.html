@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AztlanTech</title>
+ <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+   <div class="top-bar">
+  <div class="marquesina">
+    <span>Envío gratis en compras de más de $499</span>
+  </div>
+</div>
+
+<header class="menu-header">
+  <nav class="navbar">
+    <button id="hamburguesa" class="hamburguesa">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acerca.html">Acerca de</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+ 
+<section class="buscador-container">
+   <div class="logo-buscador">
+    <img src="img/AZTLAN.png" alt="Logo Aztlan" class="logo-animado">
+  </div>
+
+  <div class="barra-busqueda">
+    <input type="text" placeholder="Buscar productos o servicios..." />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="iconos-buscador">
+   <div class="icono" id="icono-usuario"><a href="login.html">
+  <i class="fas fa-user"></i></a>
+</div>
+<div class="icono usuario-logueado" id="usuario-logueado" style="display: none;">
+  <span id="nombre-usuario"></span>
+</div>
+
+<!-- Ícono Favoritos -->
+    <div class="icono" id="icono-favorito">
+      <i class="fas fa-heart"></i>
+      <div class="cuadro-flotante" id="favoritos-cuadro" style="display: none;">
+        <strong>Favoritos aquí</strong>
+        <ul id="lista-favoritos"></ul>
+      </div>
+    </div>
+
+    <!-- Ícono Carrito de Compras -->
+    <div class="icono" id="icono-carrito">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cuadro-flotante" id="carrito-cuadro" style="display: none;">
+        <strong>Productos en carrito aquí</strong>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total:</strong> $<span id="total-carrito">0.00</span></p>
+        <button id="btn-pagar"> Pagar</button>
+        <button id="vaciar-carrito">Vaciar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="menu2-categorias">
+  <ul class="menu2-scroll">
+    <li><a href="equipos.html">Computadoras</a></li>
+    <li><a href="videovigilancia.html">Videovigilancia</a></li>
+    <li><a href="accesorios.html">Accesorios</a></li>
+    <li><a href="soporte.html">Soporte Técnico</a></li>
+  </ul>
+</nav>
+
+
+ <section class="carrusel-principal">
+  <div class="carrusel-contenedor">
+    <button class="btn-carrusel prev">&#10094;</button>
+    <div class="carrusel-imagenes">
+      <div class="slide active"><img src="img/banner1.png" alt="Imagen 1"></div>
+      <div class="slide active"><img src="img/banner2.png" alt="Imagen 2"></div>
+      <div class="slide active"><img src="img/banner3.png" alt="Imagen 3"></div>
+      <div class="slide active"><img src="img/banner4.png" alt="Imagen 4"></div>
+    </div>
+    <button class="btn-carrusel next">&#10095;</button>
+  </div>
+</section>
+
+  
+  <section class="hero-section">
+  <div class="hero-carousel">
+    <div class="hero-card active">
+      <img src="img/ASUS2.jpg" alt="Mejores precios" />
+      <h3>Mejores Precios</h3>
+      <p>Encuentra lo mejor en equipos de cómputo con precios únicos.</p>
+      <a href="#precios" class="btn-hero">Ver más</a>
+    </div>
+    <div class="hero-card">
+      <img src="img/camaraip.jpg" alt="Ofertas exclusivas" />
+      <h3>Ofertas Exclusivas</h3>
+      <p>Accede a promociones únicas en productos seleccionados.</p>
+      <a href="#ofertas" class="btn-hero">Ver más</a>
+    </div>
+    <div class="hero-card">
+      <img src="img/camintext.jpg" alt="Innovación" />
+      <h3>Innovación</h3>
+      <p>Conecta con lo último en tecnología para tu hogar o empresa.</p>
+      <a href="#innovacion" class="btn-hero">Explorar</a>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+<section class="beneficios"> 
+  <h2>Beneficios de comprar con nosotros</h2>
+  <div class="beneficios-slider" id="beneficios-slider">
+    <div class="beneficio-card">🚚 Envíos rápidos y seguros</div>
+    <div class="beneficio-card">🔒 Pago seguro con múltiples métodos</div>
+    <div class="beneficio-card">📦 Productos garantizados</div>
+    <div class="beneficio-card">💬 Soporte técnico especializado</div>
+    <div class="beneficio-card">🎁 Descuentos exclusivos</div>
+    <div class="beneficio-card">🌐 Atención en todo el Estado de México</div>
+    <div class="beneficio-card">⚙️ Instalación profesional</div>
+    <div class="beneficio-card">🧾 Facturación electrónica disponible</div>
+    <div class="beneficio-card">⏱️ Atención inmediata</div>
+    <div class="beneficio-card">🛠️ Técnicos certificados</div>
+  </div>
+</section>
+
+
+<section class="promociones">
+  <h2>Promociones Destacadas</h2>
+  <div class="promo-cards">
+    <div class="promo-card">
+      <img src="img/ASUS3.png" alt="Ofertas de temporada" />
+      <h3>Ofertas de Temporada</h3>
+      <a href="#ofertas" class="btn-promo">Ver ofertas</a>
+    </div>
+    <div class="promo-card">
+      <img src="img/SER9.jpg" alt="Recien llegados" />
+      <h3>Recién Llegados</h3>
+      <a href="#nuevos" class="btn-promo">Descubrir</a>
+    </div>
+  </div>
+</section>
+
+  
+<section class="mas-vendidos">
+  <h2>Más Vendidos</h2>
+  <div class="productos-slider">
+    <div class="producto">
+      <img src="img/lAP7.jpg" alt="Laptop">
+      <p>Laptops</p>
+    </div>
+    <div class="producto">
+      <img src="img/camwifi.jpg" alt="Videocámaras">
+      <p>Videocámaras</p>
+    </div>
+    <div class="producto">
+      <img src="img/Ser1.jpg" alt="Impresoras">
+      <p>Servidores </p>
+    </div>
+    <div class="producto">
+      <img src="img/TAB2.png" alt="Routers">
+      <p>Tablets</p>
+    </div>
+    <div class="producto" data-nombre="Laptop Gamer HP">
+      <img src="img/HP2.jpg" alt="Monitores">
+      <p>Computadora Escritorio</p>
+        
+    </div>
+
+   
+
+  
+    <div class="producto">
+      <span class="etiqueta">Oferta</span>
+      <img src="img/LENO4.jpg" alt="Laptop">
+      <h3>Computadora Escritorio </h3>
+      <p><s>$25,000.00</s> $17,500.00</p>
+       <button onclick="agregarAlCarrito('computadora de Escritorio', 17500)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('computadora de Escritorio')">Agregar a Favoritos</button>
+</div>
+    <div class="producto">
+      <img src="img/HP1.jpg" alt="Drone">
+      <h3>computadora de Escritorio</h3>
+      <p>$11,000.00</p>
+      <button onclick="agregarAlCarrito('computadora de Escritorio', 11000)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('computadora de Escritorio')">Agregar a Favoritos</button>
+ </div>
+    <div class="producto">
+      <span class="etiqueta">Oferta</span>
+      <img src="img/LAP10.jpg" alt="Phone">
+      <h3>Laptop</h3>
+      <p><s>$21,000.00</s> $19,600.00</p>
+       <button onclick="agregarAlCarrito('Laptop ', 19600)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Laptop ')">Agregar a Favoritos</button>
+
+    </div>
+    <div class="producto">
+      <span class="etiqueta">Oferta</span>
+      <img src="img/LAP8.jpg" alt="Audífonos inalámbricos">
+      <h3>Laptop</h3>
+      <p><s>$10,000.00</s> $9,564.00</p>
+    <button onclick="agregarAlCarrito('Laptop ', 9564)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Laptop')">Agregar a Favoritos</button>
+</div>
+    <div class="producto">
+      <img src="img/SER10.jpg" alt="Gafas VR">
+      <h3>Servidor</h3>
+      <p>$10,000.00</p>
+    <button onclick="agregarAlCarrito('Servidor', 10000)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Servidor')">Agregar a Favoritos</button>
+</div>
+    <div class="producto">
+      <img src="img/camptz.jpg" alt="Drone">
+      <h3>CAMARA PTZ</h3>
+      <p>$15,000.00</p>
+    <button onclick="agregarAlCarrito('Camara PTZ', 15000)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Camara PTZ')">Agregar a Favoritos</button>
+</div>
+    <div class="producto">
+      <span class="etiqueta">Oferta</span>
+      <img src="img/TAB4.jpg" alt="Phone">
+      <h3>Tablet</h3>
+      <p><s>$1,200.00</s> $1,000.00</p>
+    <button onclick="agregarAlCarrito('Tablet', 1000)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Tablet')">Agregar a Favoritos</button>
+</div>
+    <div class="producto">
+      <span class="etiqueta">Oferta</span>
+      <img src="img/LENO1.jpg" alt="Fitband">
+      <h3>Laptop Lenovo </h3>
+      <p><s>$15,400</s> $12,400.00</p>
+    <button onclick="agregarAlCarrito('Laptop Lenovo', 12400)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Laptop LenovoL')">Agregar a Favoritos</button>
+</div>
+    <div class="producto">
+      <span class="etiqueta">Oferta</span>
+      <img src="img/LAP9.jpg" alt="Audífonos inalámbricos">
+      <h3>Laptop</h3>
+      <p><s>$22,000.00</s> $18,900.00</p>
+    <button id="icono-carrito" onclick="agregarAlCarrito('Laptop ', 18900)"><i class="fas fa-shopping-cart"></i></button>
+    <button id="icono-favorito"onclick="agregarAFavoritos('Laptop ')"><i class="fas fa-heart"></i></button>
+</div>
+  </div>
+  <button href="mas_vendidos.html" class="ver-todo">Ver todo</button>
+</section>
+  
+<!--seccion de comprar por categoria-->
+
+<section class="categorias">
+  <h2>Comprar por categoría</h2>
+  <div class="carrusel-container">
+    <button class="control prev"> &#10094;</button>
+  <div class="iconos" id="carrusel">
+    <div class=categoria>
+      <img src="img/comp_esc.jpg">
+      <a href="computo.html #pc">Computadoras de Escritorio</a></div>
+    <div class=categoria>
+      <img src="img/laptop.jpg">
+      <a href="computo.html #lap ">Laptops</a></div>
+    <div class=categoria>
+      <img src="img/tabletas.jpg">
+      <a href="computo.html #tablet ">Tabletas</a></div>
+    <div class=categoria>
+      <img src="img/servidores.jpg">
+      <a href="computo.html #servidores ">Servidores</a></div>
+    <div class=categoria>
+      <img src="img/oferta.jpg">
+      <a href="ofertas.html">Oferta</a></div>
+    <div class=categoria>
+      <img src="img/accesorios.jpg">
+      <a href="accesorios.html">Accesorios</a></div>
+    <div class=categoria>
+      <img src="img/moviles.jpg">
+      <a href="computo.html #movil">Dispositivos Moviles</a></div>
+    <div class=categoria>
+      <img src="img/ventas.jpg">
+      <a href="mas_vendidos.html">Más vendidos</a></div>
+    <div class=categoria>
+      <img src="img/camaraip.jpg">
+      <a href="videovigilancia.html #IP">Camaras IP</a></div>
+    <div class=categoria>
+      <img src="img/camptz.jpg">
+      <a href="videovigilancia.html #PTZ">Camaras PTZ</a></div>
+    <div class=categoria>
+      <img src="img/camdomo.jpg">
+      <a href="videovigilancia #DOMO ">Camaras Domo</a></div>
+    <div class=categoria>
+      <img src="img/camwifi.jpg">
+      <a href="videovigilancia.html #INAL">Camaras Inalambricas (WIFI)</a></div>
+    <div class=categoria>
+      <img src="img/camzoommov.jpg">
+      <a href="videovigilancia.html #ZOOM">Camaras con Zoom y Movimiento</a></div>
+    <div class=categoria>
+      <img src="img/camintext.jpg">
+      <a href="videovigilancia.html #INT">Camaras para Interiores y Exteriores</a>
+    </div>
+    <button class="control next"> &#10095;</button>
+  </div>
+</section>
+
+  <section class="hero">
+    <div class="hero-content">
+      <img src="img/computo3.jpg" alt="Tablet oferta" class="hero-img">
+      <div class="hero-texto">
+        <span class="mejor-precio">Mejor precio</span>
+        <h2>Ahorra hasta <strong>$150</strong></h2>
+        <p>en laptops y tabletas seleccionadas</p>
+        <small>Aplican los términos y condiciones</small>
+        <a href="computo.html" class="btn-tienda">Tienda</a>
+      </div>
+    </div>
+<div class="hero-content">
+  <img src="img/videovigilancia2.jpg" alt="camara oferta" class="hero-img">
+  <div class="hero-texto">
+    <span class="mejor-precio">Mejor precio</span>
+    <h2>Ahorra hasta <strong>$200</strong></h2>
+    <p>en camaras de Videovigilancia</p>
+    <small>Aplican los términos y condiciones</small>
+    <a href="videovigilancia.html" class="btn-tienda">Tienda</a>
+  </div>
+</div>
+</section>
+
+
+    <!-- Sección de Oferta -->
+    <section class="ofertas">
+      <h2>Ofertas Especiales</h2>
+      <div class="galeria-ofertas">
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/camwifi.jpg" alt="Smartwatch">
+          <h3>TP-Link Tapo C500, Cámara de Seguridad Wi-Fi</h3>
+          <p><del>$999.00</del> <strong>$885.00</strong></p>
+       <button onclick="agregarAlCarrito('TP-Link ', 885)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('TP-Link ')">Agregar a Favoritos</button>
+ </div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/LAP6.jpg" alt="Tablet OVE">
+          <h3>HUAWEI Laptop Thin & Light MateBook</h3>
+          <p><del>$999.00</del> <strong>$19,640.00</strong></p>
+      <button onclick="agregarAlCarrito('HUAWEI Laptop', 19640)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('HUAWEI Laptop')">Agregar a Favoritos</button>
+ </div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/LAP9.jpg" alt="Laptop Pizcas">
+          <h3>Laptop Pizcas con pantalla LCD de 16” y 24GB de RAM</h3>
+          <p><del>$17,900.00</del> <strong>$14,164.00</strong></p>
+       <button onclick="agregarAlCarrito('Laptop Pizcas', 14164)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Laptop Pizcas')">Agregar a Favoritos</button>
+ </div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/SER2.jpg" alt="Bocina bluetooth">
+          <h3>Synology 2-Bay DiskStation DS223j</h3>
+          <p><del>$879.00</del> <strong>$464.00</strong></p>
+        <button onclick="agregarAlCarrito('Synology 2-Bay', 464)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Synology 2-Bay')">Agregar a Favoritos</button>
+ </div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/TAB11.jpg" alt="Gafas VR">
+          <h3>Samsung Galaxy Tab A9 (SM-X115)</h3>
+          <p><del>$3,628.00</del> <strong>$3,100.00</strong></p>
+        <button onclick="agregarAlCarrito('Samsung Galaxy ', 3100)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Samsung Galaxy ')">Agregar a Favoritos</button>
+</div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/CAMINEX.jpg" alt="Cámara seguridad">
+          <h3>EASYTAO Kit de Sistema de Cámara de Seguridad 2K, 8CH 3MP WiFi NVR + 4 3MP</h3>
+          <p><del>$6,700.00</del> <strong>$3,299.00</strong></p>
+       <button onclick="agregarAlCarrito('EASYTAO Kit ', 3299)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('EASYTAO Kit ')">Agregar a Favoritos</button>
+</div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/LAP10.jpg" alt="Tablet OVE">
+          <h3>ASUS Laptop TUF Gaming A15 / AMD Ryzen 5 / RTX 3050 / 16GB RAM</h3>
+          <p><del>$999.00</del> <strong>$964.00</strong></p>
+        <button onclick="agregarAlCarrito('ASUS Laptop TUF', 964)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('ASUS Laptop TUF')">Agregar a Favoritos</button>
+ </div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/LAP5.jpg" alt="Laptop Pizcas">
+          <h3>Acer Laptop Aspire Lite 16" WUXGA Core i7 12va 10 Núcleos | Panel IPS | 16GB RAM</h3>
+          <p><del>$19,799.00</del> <strong>$15,700.00</strong></p>
+        <button onclick="agregarAlCarrito('Acer Laptop Aspire Lite 16', 15700)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('Acer Laptop Aspire Lite 16')">Agregar a Favoritos</button>
+</div>
+        <div class="producto">
+          <span class="etiqueta-oferta">OFERTA</span>
+          <img src="img/TABLE.jpg" alt="Bocina bluetooth">
+          <h3>SAMSUNG Galaxy Tab A9+ (SM-X210) - Tablet de 64GB 4GB RAM</h3>
+          <p><del>$5,200.00</del> <strong>$3,877.00</strong></p>
+       <button onclick="agregarAlCarrito('SAMSUNG Galaxy', 3877)">Agregar al Carrito</button>
+    <button onclick="agregarAFavoritos('SAMSUNG Galaxy')">Agregar a Favoritos</button>
+ </div>
+      </div>
+      <button href="ofertas.html" class="ver-todo">Ver todo</button>
+    </section>
+
+<!-- Especial del día -->
+
+<section class="especial-dia">
+  <div class="especial-texto">
+    <span class="etiqueta-especial">Especial del día</span>
+    <h2>La mejor vista de tu residencia <strong>30% DTO</strong></h2>
+    <p>en camaras de videovigilancia</p>
+    <small>Cantidades limitadas. Disponibilidad en la página del producto.</small>
+    <a href="videovigilancia.html" class="btn-tienda">Tienda</a>
+  </div>
+  <div class="especial-imagen">
+    <img src="img/videovigilancia2.jpg" >
+  </div>
+</section>
+
+<!-- Marcas -->
+
+<section class="marcas">
+  <h2>Marcas destacadas</h2>
+  <div class="marcas-carrusel">
+    <img src="img/marca_hik.png" alt="HIKVISION">
+    <img src="img/marca_huawei.png" alt="HUAWEI">
+    <img src="img/marca_acer.png" alt="ACER">
+    <img src="img/marca_toshiba.jpg" alt="TOSHIBA">
+    <img src="img/marca_vaio.jpg" alt="VAIO">
+    <img src="img/marca_dahua.png" alt="DAHUA">
+    <img src="img/marca_sam.png" alt="SAMSUNG">
+    <img src="img/marca_axis.png" alt="AXIS">
+    <img src="img/marca_tp.png" alt="TP-LINK">
+    <img src="img/marca_dell.png" alt="DELL">
+    <img src="img/marca_hp.png" alt="HP">
+    <img src="img/marca_lenovo.png" alt="LENOVO">
+    <img src="img/marca_asus.png" alt="ASUS">
+    <img src="img/marca_msi.png" alt="MSI">
+
+
+    <!-- Duplicado para efecto de carrusel infinito -->
+    <img src="img/marca_hik.png" alt="HIKVISION">
+    <img src="img/marca_huawei.png" alt="HUAWEI">
+    <img src="img/marca_acer.png" alt="ACER">
+    <img src="img/marca_toshiba.jpg" alt="TOSHIBA">
+    <img src="img/marca_vaio.jpg" alt="VAIO">
+    <img src="img/marca_dahua.png" alt="DAHUA">
+    <img src="img/marca_sam.png" alt="SAMSUNG">
+    <img src="img/marca_axis.png" alt="AXIS">
+    <img src="img/marca_tp.png" alt="TP-LINK">
+    <img src="img/marca_dell.png" alt="DELL">
+    <img src="img/marca_hp.png" alt="HP">
+    <img src="img/marca_lenovo.png" alt="LENOVO">
+    <img src="img/marca_asus.png" alt="ASUS">
+    <img src="img/marca_msi.png" alt="MSI">
+
+  </div>
+</section>
+
+<!-- Boletín informativo -->
+
+<section class="boletin">
+  <h2>Boletín informativo</h2>
+  <p>Suscríbete y recibe noticias sobre novedades y ofertas especiales</p>
+  <form class="formulario-boletin">
+    <input type="email" placeholder="Ingresa tu email aquí">
+    <button type="submit">Suscribirse</button>
+  </form>
+</section>
+
+<!-- Ayuda -->
+
+<section class="ayuda">
+  <div class="ayuda-info">
+    <h2>AYUDA Y SOPORTE</h2>
+    <h3>¿Buscas ayuda? Ve a la página de Ayuda</h3>
+    <div class="comentarios-ayuda">
+        <div class="form-comentario">
+          <textarea placeholder="Deja tu experiencia...">
+          </textarea>
+          <button>Enviar comentario</button>
+        </div>
+        <div class="testimonios">
+          <!-- Comentarios aparecerán aquí -->
+        </div>
+      </div>
+      <button href="ayuda_sopor.html" class="centro-ayuda">Ir al centro de ayuda</button>
+    </section>
+  
+<!-- Footer -->
+
+<footer>
+
+  <div class="footer-column">
+    <div class="columna">
+      <h4>Ubicación de tienda</h4>
+      <p>Av. Olivos #37 San Lorenzo La Cañada<br>53426, Naucalpan de Juarez, Edo. de Mexico</p>
+      <p>aztlantech23@gmail.com<br>+52-56-2589-7771</p>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.9524518377098!2d-99.27451762603805!3d19.457616739883914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2038ec14f9c9d%3A0x6564e36caa687932!2sAnd.%20Los%20Olivos%2037%2C%20Col%20de%20la%20Ca%C3%B1ada%20de%20San%20Lorenzo%20Totolinga%2C%2053426%20Naucalpan%20de%20Ju%C3%A1rez%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1747230664551!5m2!1ses-419!2smx">
+  width="100%" 
+  height="150" 
+  style="border:0; border-radius:10px; margin-top:15px;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+<!-- Redes Sociales -->
+<div class="redes">
+  <a href="https://facebook.com" target="_blank">
+    <img src="img/facebook.png" alt="Facebook">
+  </a>
+  <a href="https://twitter.com" target="_blank">
+    <img src="img/whatsapp.png" alt="Twitter">
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <img src="img/instagram.png" alt="Instagram">
+  </a>
+</div>
+</div>
+    <div class="columna">
+      <h4>Tienda</h4>
+      <ul>
+        <li>Comprar todo</li>
+        <li>Computadoras de Escritorio</li>
+        <li>Laptops</li>
+        <li>Tabletas</li>
+        <li>Servidores</li>
+        <li>Oferta</li>
+        <li>Accesorios</li>
+        <li>Dispositivos Moviles</li>
+        <li>Más vendidos</li>
+        <li>Camaras IP</li>
+        <li>Camaras PTZ</li>
+        <li>Camaras Domo</li>
+        <li>Camaras Inalambricas (WIFI)</li>
+        <li>Camaras con Zoom y Movimiento</li>
+        <li>Camaras para Interiores y Exteriores</li>
+      </ul>
+    </div>
+    <div class="columna">
+      <h4>Atención al cliente</h4>
+      <ul>
+        <li>Contáctanos</li>
+        <li>Ubicacion</li>
+        <li>Acerca de</li>
+        <li>Guias</li>
+      </ul>
+    </div>
+    <div class="columna">
+      <h4>Política</h4>
+      <ul>
+        <li>Envío y devoluciones</li>
+        <li>Términos y condiciones</li>
+        <li>Métodos de pago</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</main>
+
+<!-- Iconos flotantes de redes sociales -->
+
+<div class="social-float">
+  <a href="https://wa.me/5215555555555" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.facebook.com/aztlan" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/aztlan" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+</div>
+
+<!-- Botón flotante de chat -->
+
+<div class="chat-float" onclick="toggleChat()">
+  <i class="fas fa-comment-alt"></i>
+</div>
+
+<!-- Ventana de chat (mejorada) -->
+
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">Asistencia en línea</div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-bubble bot">¿En qué podemos ayudarte hoy?</div>
+  </div>
+  <div class="chat-input-area">
+    <textarea id="userInput" placeholder="Escribe tu mensaje..."></textarea>
+    <div class="chat-actions">
+      <button class="send" onclick="sendMessage()">Enviar</button>
+      <button class="close" onclick="toggleChat()">Cerrar</button>
+    </div>
+  </div>
+</div>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="JS/script.js"></script>
+  <script src="JS/carrito.js"></script>"
+  <script src="JS/funciones-carrito-favorito.js"></script> 
+</body>
+</html>
+

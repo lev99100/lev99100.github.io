@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceso de Compra | Aztlan NET Technology</title>
+  <link rel="stylesheet" href="CSS/checkout.css">
+</head>
+<body>
+  <section class="checkout-container">
+    <h2>Finalizar Compra</h2>
+
+    <div class="resumen-compra">
+      <h3>Resumen del Pedido</h3>
+      <ul id="lista-compra"></ul>
+      <p>Subtotal: $<span id="subtotal">0.00</span></p>
+      <div class="descuento-section">
+        <input type="text" id="cupon" placeholder="Código de descuento">
+        <button onclick="aplicarCupon()">Aplicar Cupón</button>
+        <p id="descuento-msg"></p>
+      </div>
+      <p>Total con descuento: $<span id="total-descuento">0.00</span></p>
+    </div>
+
+    <div class="formulario-entrega">
+      <h3>Datos de Entrega</h3>
+      <form id="formulario-pago">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="text" id="direccion" placeholder="Dirección completa" required>
+        <input type="tel" id="telefono" placeholder="Teléfono de contacto" required>
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <h4>Forma de pago: Transferencia bancaria</h4>
+        <p><strong>Banco:</strong> BBVA</p>
+        <p><strong>Cuenta:</strong> 1234 5678 9012 3456</p>
+        <p><strong>Titular:</strong> Aztlan NET Technology</p>
+        <p><strong>CLABE:</strong> 012345678901234567</p>
+        <button type="submit">Confirmar Pedido</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="JS/checkout.js"></script>
+</body>
+</html>

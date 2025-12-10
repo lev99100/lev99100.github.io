@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AztlanTech</title>
+ <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/style.css"></head>
+<body>
+
+   <div class="top-bar">
+  <div class="marquesina">
+    <span>Envío gratis en compras de más de $499</span>
+  </div>
+</div>
+
+<header class="menu-header">
+  <nav class="navbar">
+    <button id="hamburguesa" class="hamburguesa">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+       <li><a href="index.html">Inicio</a></li>
+      <li><a href="acerca.html">Acerca de</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+  
+<section class="buscador-container">
+  <div class="logo-buscador">
+    <img src="img/AZTLAN.png" alt="Logo Aztlan" class="logo-animado">
+  </div>
+  <div class="barra-busqueda">
+    <input type="text" placeholder="Buscar productos o servicios..." />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="iconos-buscador">
+   <div class="icono" id="icono-usuario"><a href="login.html">
+  <i class="fas fa-user"></i></a>
+</div>
+<div class="icono usuario-logueado" id="usuario-logueado" style="display: none;">
+  <span id="nombre-usuario"></span>
+</div>
+    <div class="icono" id="icono-favorito">
+      <i class="fas fa-heart"></i>
+      <div class="cuadro-flotante" id="favoritos-cuadro">Productos favoritos aquí</div>
+    </div>
+    <div class="icono" id="icono-carrito">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cuadro-flotante" id="carrito-cuadro">Productos en carrito aquí</div>
+    </div>
+  </div>
+</section>
+
+<nav class="menu2-categorias">
+  <ul class="menu2-scroll">
+    <li><a href="equipos.html">Computadoras</a></li>
+    <li><a href="videovigilancia.html">Videovigilancia</a></li>
+    <li><a href="accesorios.html">Accesorios</a></li>
+    <li><a href="soporte.html">Soporte Técnico</a></li>
+  </ul>
+</nav>
+<!-- CATÁLOGO -->
+  <section class="catalogo-accesorios">
+    <aside class="filtro">
+      <h2>Filtrar por</h2>
+      <label>Precio</label>
+      <input type="range" min="150" max="490" />
+      <label>Marca</label>
+      <ul>
+        <li><input type="checkbox" /> Commmmm</li>
+        <li><input type="checkbox" /> GXL</li>
+        <li><input type="checkbox" /> Horizon</li>
+        <li><input type="checkbox" /> Mobile+</li>
+        <li><input type="checkbox" /> UStore</li>
+        <li><input type="checkbox" /> Zodiac</li>
+      </ul>
+      <label>Productos</label>
+      <ul>
+        <li><input type="checkbox" /> Audífonos</li>
+        <li><input type="checkbox" /> Cables y adaptadores</li>
+        <li><input type="checkbox" /> Fundas y protección</li>
+      </ul>
+    </aside>
+
+    <main class="productos-accesorios">
+      <!-- Productos de ejemplo -->
+      <div class="tarjeta-producto-accesorios" data-tag="Recién llegados">
+        <img src="img/cable1.png" alt="Cable" />
+        <h3>Producto</h3>
+        <p>$190.00</p>
+      </div>
+
+      <div class="tarjeta-producto-accesorios" data-tag="Oferta">
+        <img src="img/audifonos.png" alt="Audífonos" />
+        <h3>Producto</h3>
+        <p><del>$350.00</del> <strong>$260.00</strong></p>
+      </div>
+
+      <div class="tarjeta-producto-accesorios" data-tag="Más vendido">
+        <img src="img/funda2.png" alt="Funda" />
+        <h3>Producto</h3>
+        <p>$190.00</p>
+      </div>
+
+      <!-- Agrega más productos aquí -->
+    </main>
+  </section>
+
+
+<!-- Footer -->
+
+<footer>
+
+  <div class="footer-column">
+    <div class="columna">
+      <h4>Ubicación de tienda</h4>
+      <p>Av. Olivos #37 San Lorenzo La Cañada<br>53426, Naucalpan de Juarez, Edo. de Mexico</p>
+      <p>aztlantech23@gmail.com<br>+52-56-2589-7771</p>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.9524518377098!2d-99.27451762603805!3d19.457616739883914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2038ec14f9c9d%3A0x6564e36caa687932!2sAnd.%20Los%20Olivos%2037%2C%20Col%20de%20la%20Ca%C3%B1ada%20de%20San%20Lorenzo%20Totolinga%2C%2053426%20Naucalpan%20de%20Ju%C3%A1rez%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1747230664551!5m2!1ses-419!2smx">
+  width="100%" 
+  height="150" 
+  style="border:0; border-radius:10px; margin-top:15px;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+<!-- Redes Sociales -->
+<div class="redes">
+  <a href="https://facebook.com" target="_blank">
+    <img src="img/facebook.png" alt="Facebook">
+  </a>
+  <a href="https://twitter.com" target="_blank">
+    <img src="img/whatsapp.png" alt="Twitter">
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <img src="img/instagram.png" alt="Instagram">
+  </a>
+</div>
+</div>
+    <div class="columna">
+      <h4>Tienda</h4>
+      <ul>
+        <li>Comprar todo</li>
+        <li>Computadoras de Escritorio</li>
+        <li>Laptops</li>
+        <li>Tabletas</li>
+        <li>Servidores</li>
+        <li>Oferta</li>
+        <li>Accesorios</li>
+        <li>Dispositivos Moviles</li>
+        <li>Más vendidos</li>
+        <li>Camaras IP</li>
+        <li>Camaras PTZ</li>
+        <li>Camaras Domo</li>
+        <li>Camaras Inalambricas (WIFI)</li>
+        <li>Camaras con Zoom y Movimiento</li>
+        <li>Camaras para Interiores y Exteriores</li>
+      </ul>
+    </div>
+    <div class="columna">
+      <h4>Atención al cliente</h4>
+      <ul>
+        <li>Contáctanos</li>
+        <li>Ubicacion</li>
+        <li>Acerca de</li>
+        <li>Guias</li>
+      </ul>
+    </div>
+    <div class="columna">
+      <h4>Política</h4>
+      <ul>
+        <li>Envío y devoluciones</li>
+        <li>Términos y condiciones</li>
+        <li>Métodos de pago</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</main>
+
+<!-- Iconos flotantes de redes sociales -->
+
+<div class="social-float">
+  <a href="https://wa.me/5215555555555" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.facebook.com/aztlan" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/aztlan" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+</div>
+
+<!-- Botón flotante de chat -->
+
+<div class="chat-float" onclick="toggleChat()">
+  <i class="fas fa-comment-alt"></i>
+</div>
+
+<!-- Ventana de chat (mejorada) -->
+
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">Asistencia en línea</div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-bubble bot">¿En qué podemos ayudarte hoy?</div>
+  </div>
+  <div class="chat-input-area">
+    <textarea id="userInput" placeholder="Escribe tu mensaje..."></textarea>
+    <div class="chat-actions">
+      <button class="send" onclick="sendMessage()">Enviar</button>
+      <button class="close" onclick="toggleChat()">Cerrar</button>
+    </div>
+  </div>
+</div>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="JS/script.js"></script>
+<script src="JS/carrito.js"></script>"
+  <script src="JS/funciones-carrito-favorito.js"></script> 
+
+</body>
+</html>
+

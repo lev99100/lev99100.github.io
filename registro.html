@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Aztlan NET</title>
+  <link rel="stylesheet" href="CSS/login.css">
+</head>
+<body>
+  <div class="background-wave"></div>
+
+  <div class="registro-container">
+    <div class="registro-card">
+      <h2>Crear cuenta</h2>
+      <p>Completa el formulario para registrarte</p>
+
+      <form id="formRegistro">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+        <input type="text" id="usuario" placeholder="Nombre de usuario" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <input type="password" id="confirmar" placeholder="Confirmar contraseña" required />
+        <input type="text" id="codigoVerificacion" placeholder="Código de verificación (correo)" required disabled />
+
+        <button type="button" onclick="enviarCodigo()">Enviar código a Gmail</button>
+        <div class="progreso">
+          <div class="barra-progreso" id="barraProgreso"></div>
+        </div>
+
+        <button type="submit" id="btnRegistro" disabled>Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="JS/server.js"></script>
+  <script src="JS/login.js"></script>
+</body>
+</html>

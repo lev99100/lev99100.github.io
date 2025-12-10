@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AztlanTech</title>
+ <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/style.css"></head>
+<body>
+
+   <div class="top-bar">
+  <div class="marquesina">
+    <span>Envío gratis en compras de más de $499</span>
+  </div>
+</div>
+
+<header class="menu-header">
+  <nav class="navbar">
+    <button id="hamburguesa" class="hamburguesa">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acerca.html">Acerca de</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+ 
+<section class="buscador-container">
+   <div class="logo-buscador">
+    <img src="img/AZTLAN.png" alt="Logo Aztlan" class="logo-animado">
+  </div>
+
+  <div class="barra-busqueda">
+    <input type="text" placeholder="Buscar productos o servicios..." />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <div class="iconos-buscador">
+   <div class="icono" id="icono-usuario"><a href="login.html">
+  <i class="fas fa-user"></i></a>
+</div>
+<div class="icono usuario-logueado" id="usuario-logueado" style="display: none;">
+  <span id="nombre-usuario"></span>
+</div>
+
+<!-- Ícono Favoritos -->
+    <div class="icono" id="icono-favorito">
+      <i class="fas fa-heart"></i>
+      <div class="cuadro-flotante" id="favoritos-cuadro" style="display: none;">
+        <strong>Favoritos aquí</strong>
+        <ul id="lista-favoritos"></ul>
+      </div>
+    </div>
+
+    <!-- Ícono Carrito de Compras -->
+    <div class="icono" id="icono-carrito">
+      <i class="fas fa-shopping-cart"></i>
+      <div class="cuadro-flotante" id="carrito-cuadro" style="display: none;">
+        <strong>Productos en carrito aquí</strong>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total:</strong> $<span id="total-carrito">0.00</span></p>
+        <button id="btn-pagar">Pagar</button>
+        <button id="vaciar-carrito">Vaciar</button>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="JS/carrito.js"></script>"
+  <script src="JS/funciones-carrito-favorito.js"></script> 
