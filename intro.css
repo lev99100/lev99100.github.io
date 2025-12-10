@@ -1,0 +1,81 @@
+/* Fondo tecnológico moderno */
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor centrado */
+.intro-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video centrado */
+video {
+  width: 100%;
+  height: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.9) saturate(1.2) contrast(1.1);
+  border-radius: 15px;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.25);
+}
+
+/* Capa superior */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00ffff;
+  text-align: center;
+  z-index: 10;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.titulo-efecto {
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+.subtitulo-efecto {
+  font-size: 1.5em;
+  margin-top: 10px;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .titulo-efecto {
+    font-size: 2em;
+  }
+  .subtitulo-efecto {
+    font-size: 1.2em;
+  }
+}
